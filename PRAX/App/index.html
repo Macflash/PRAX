@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="PRAX">
+<head>
+    <meta charset="utf-8" />
+    <title>PRAX</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="angular/angular.min.js"></script>
+    <script src="jquery/jquery-2.1.4.min.js"></script>
+    <script src="typescript/person.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>PRAX: The Game</h1>
+    <div style="float:left;">
+        People: <br />
+        <div ng-controller="peopleController">
+            <div ng-repeat="person in people">
+                <div person-detail></div>
+            </div>
+        </div>
+    </div>
+    <div style="float:left;">
+        Goods: <br />
+        <div ng-controller="goodController">
+            <div ng-repeat="good in goods">
+                <div good-detail></div>
+            </div>
+        </div>
+    </div>
+    <div style="float:left;">
+        Factories: <br />
+        <div ng-controller="factoryController">
+            <div ng-repeat="factory in factories">
+                <div factory-detail></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
